@@ -1,0 +1,63 @@
+<svg width="600" height="536" viewBox="0 0 600 536" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Ecosystem Diagramming</title>
+  <desc>A branching flowchart showing Reserved Seating splits into Seat Maps, Ticket Pricing, and Seat Management, which converge into Published Ticketed Event</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="10" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M1 1L5 9L9 1" fill="none" stroke="#6B67C4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="600" height="536" rx="16" fill="#FEF3DC"/>
+
+  <rect x="180" y="28" width="240" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="300" y="57" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Reserved Seating</text>
+
+  <line x1="300" y1="76" x2="300" y2="110" stroke="#6B67C4" stroke-width="1.5"/>
+  <line x1="90" y1="110" x2="510" y2="110" stroke="#6B67C4" stroke-width="1.5"/>
+
+  <line x1="90" y1="110" x2="90" y2="153" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="84,153 96,153 90,165" fill="#6B67C4"/>
+
+  <line x1="300" y1="110" x2="300" y2="153" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="294,153 306,153 300,165" fill="#6B67C4"/>
+
+  <line x1="510" y1="110" x2="510" y2="153" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="504,153 516,153 510,165" fill="#6B67C4"/>
+
+  <rect x="30" y="168" width="120" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="90" y="197" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Seat Maps</text>
+  <line x1="90" y1="216" x2="90" y2="251" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="84,251 96,251 90,263" fill="#6B67C4"/>
+  <rect x="30" y="266" width="120" height="62" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="90" y="290" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Create/Edit</text>
+  <text x="90" y="310" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Layouts</text>
+
+  <rect x="220" y="168" width="160" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="300" y="197" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Ticket Pricing</text>
+  <line x1="300" y1="216" x2="300" y2="251" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="294,251 306,251 300,263" fill="#6B67C4"/>
+  <rect x="220" y="266" width="160" height="76" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="300" y="288" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Ticket Types</text>
+  <text x="300" y="308" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Discounts</text>
+  <text x="300" y="328" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Price Levels</text>
+
+  <rect x="450" y="168" width="120" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="510" y="188" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Seat</text>
+  <text x="510" y="206" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Management</text>
+  <line x1="510" y1="216" x2="510" y2="251" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="504,251 516,251 510,263" fill="#6B67C4"/>
+  <rect x="450" y="266" width="120" height="76" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="510" y="288" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Reserve Seats</text>
+  <text x="510" y="308" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">Block Seats</text>
+  <text x="510" y="328" font-family="Georgia, serif" font-size="13.5" fill="#5F5E5A" text-anchor="middle">VIP Holds</text>
+
+  <line x1="90" y1="328" x2="90" y2="398" stroke="#6B67C4" stroke-width="1.5"/>
+  <line x1="300" y1="342" x2="300" y2="398" stroke="#6B67C4" stroke-width="1.5"/>
+  <line x1="510" y1="342" x2="510" y2="398" stroke="#6B67C4" stroke-width="1.5"/>
+  <line x1="90" y1="398" x2="510" y2="398" stroke="#6B67C4" stroke-width="1.5"/>
+  <line x1="300" y1="398" x2="300" y2="441" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="294,441 306,441 300,453" fill="#6B67C4"/>
+
+  <rect x="160" y="456" width="280" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="300" y="485" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Published Ticketed Event</text>
+</svg>

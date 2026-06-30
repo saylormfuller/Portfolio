@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Builder Feature — Case Study | Saylor Fuller</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    .case-study-header {
+      padding: 80px 0 40px;
+      background: var(--bg);
+    }
+    .case-study-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .case-study-intro {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+    
+    .case-study-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .meta-item h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .meta-item p {
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .case-study-section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .case-study-section:last-of-type {
+      border-bottom: none;
+    }
+    .case-study-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: var(--text);
+      margin-bottom: 2rem;
+    }
+    .case-study-section h3 {
+      color: var(--text);
+      font-size: 1.25rem;
+      margin: 2rem 0 0.75rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .case-study-section p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+    .insights-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0 0 1.5rem;
+      max-width: 800px;
+    }
+    .insights-list li {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 0.4rem;
+    }
+
+    .image-placeholder {
+      background: var(--bg-2);
+      border: 2px dashed var(--border);
+      border-radius: var(--radius-lg);
+      padding: 120px 40px;
+      text-align: center;
+      color: var(--text-muted);
+      margin: 3rem 0;
+      font-size: 1rem;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .process-step {
+      padding: 2rem;
+      background: var(--bg-2);
+      border-radius: var(--radius-lg);
+    }
+    .process-step h3 {
+      color: var(--text);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .process-step p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .flow-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+    .flow-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    .flow-card h4 {
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 0.9rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .flow-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .flow-steps li {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    .flow-steps li + li::before {
+      content: "↓";
+      display: block;
+      color: var(--accent);
+      margin: 0.25rem 0;
+    }
+
+    .case-media {
+      margin: 1rem 0 0.5rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+    }
+    .case-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .case-media video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .desktop-frame {
+      max-width: 1040px;
+      margin: 2rem auto 0.5rem;
+      border-radius: 14px;
+      border: 1px solid #2f3344;
+      background: #0f1320;
+      padding: 0.75rem;
+      box-shadow: 0 16px 36px rgba(14, 17, 29, 0.35);
+    }
+    .desktop-frame-top {
+      height: 24px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #1f2640 0%, #171d31 100%);
+      border: 1px solid #303a58;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0 0.6rem;
+    }
+    .desktop-frame-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #8f97b8;
+      opacity: 0.9;
+    }
+    .desktop-frame-screen {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #2f3344;
+      background: #0b0f1b;
+    }
+
+    .media-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      max-width: 1120px;
+    }
+    .media-group {
+      margin-top: 1.5rem;
+    }
+    .media-group h4 {
+      margin: 0 0 0.25rem;
+      color: var(--text);
+      font-size: 1rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      transition: all var(--transition);
+    }
+    .back-link:hover {
+      color: var(--accent2);
+    }
+
+    @media (max-width: 980px) {
+      .media-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 700px) {
+      .media-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SF</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== CASE STUDY ===================== -->
+  <main>
+    <section class="case-study-header">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">← Back to Projects</a>
+        <h1>Form Builder Feature</h1>
+        <p class="case-study-intro">
+          Designed a flexible Form Builder that lets administrators use templates, save custom forms, or build forms directly within an event.
+        </p>
+
+        <div class="desktop-frame">
+          <div class="desktop-frame-top" aria-hidden="true">
+            <span class="desktop-frame-dot"></span>
+            <span class="desktop-frame-dot"></span>
+            <span class="desktop-frame-dot"></span>
+          </div>
+          <figure class="case-media desktop-frame-screen">
+            <img src="form-builder-forms-header.png" alt="Form Builder header view displayed in a desktop-style frame" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="case-study-meta">
+          <div class="meta-item">
+            <h3>Company</h3>
+            <p>Vega Events</p>
+          </div>
+          <div class="meta-item">
+            <h3>Date</h3>
+            <p>Sep 2025 - Jan 2026</p>
+          </div>
+          <div class="meta-item">
+            <h3>Team</h3>
+            <p>Chief Executive Officer, Chief Product Officer, Software Development, QA Development</p>
+          </div>
+          <div class="meta-item">
+            <h3>My Role</h3>
+            <p>Product Strategy, UX/UI Product Design, UX Researcher</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Overview</h2>
+        <p>
+          Vega Events helps K–12 schools plan and manage customizable events throughout the school year. Through user research, we identified the need for built-in forms that could handle registrations, permission slips, attendance, and more without relying on external tools.
+        </p>
+        <p>
+          I designed a flexible Form Builder that allows administrators to use pre-built templates, save custom templates, or create forms directly within an event, making information collection faster and more seamless.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Problem</h2>
+        <p>
+          Schools relied on a variety of tools and manual processes to collect information from event attendees, including registrations, RSVPs, food selections, permission slips, waivers, and liability forms.
+        </p>
+        <p>
+          While these workflows were closely tied to event management, administrators often had to leave Vega and recreate the same forms repeatedly across multiple events. The challenge was creating a flexible system that could support diverse use cases while remaining simple enough for busy school administrators to manage.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Solution</h2>
+        <p>
+          I designed a Form Builder that allows administrators to create, save, and reuse customizable forms directly within Vega.
+        </p>
+        <p>
+          Users can start from pre-built templates, create organization-wide templates, or build forms directly within an event and save them for future use. The result is a centralized system that streamlines data collection while reducing repetitive administrative work.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Process</h2>
+        <h3>Research & Discovery</h3>
+        <p>
+          As Vega expanded its event management capabilities, we conducted customer interviews and analyzed common event workflows to better understand how schools collected information from attendees.
+        </p>
+        <p>
+          While the use cases varied widely, a clear pattern emerged: forms were a critical part of event management.
+        </p>
+
+        <h3>Key Insights</h3>
+        <ul class="insights-list">
+          <li>Schools frequently collected registrations, RSVPs, and attendance information.</li>
+          <li>Permission slips and liability waivers were common requirements for student activities.</li>
+          <li>Administrators regularly recreated similar forms across multiple events.</li>
+          <li>Many organizations relied on external tools to manage information collection.</li>
+          <li>Users wanted flexibility without having to build every form from scratch.</li>
+        </ul>
+        <p>
+          These findings revealed an opportunity to bring information collection directly into Vega's event management ecosystem.
+        </p>
+
+        <h3>Opportunity</h3>
+        <p>
+          The challenge wasn't simply creating a form builder, it was designing a system that balanced customization with efficiency.
+        </p>
+        <p>
+          Some organizations wanted complete control over every field, while others preferred quick-start solutions that required little setup.
+        </p>
+        <p>
+          The design challenge became: How might we support highly customized forms while making common workflows fast and repeatable?
+        </p>
+
+        <h3>User Flows</h3>
+        <p>
+          To understand where forms fit within the event creation process, I mapped the relationship between event setup, registration management, and form creation.
+        </p>
+
+        <div class="flow-grid">
+          <div class="flow-card">
+            <img src="event-registration-flow.svg" alt="Event Registration Flow diagram" loading="lazy" />
+          </div>
+          <div class="flow-card">
+            <img src="form-creation-flow.svg" alt="Form Creation Flow diagram" loading="lazy" />
+          </div>
+        </div>
+        <p>
+          Mapping these flows helped identify where templates could reduce repetitive work while still allowing customization when needed.
+        </p>
+
+        <h3>Design & Iteration</h3>
+        <p>
+          To accommodate a wide range of use cases, I designed multiple entry points into the form-building experience.
+        </p>
+        <p>
+          Administrators could start with Vega-provided templates for common school workflows, create and manage organization-wide templates in Settings, build custom forms directly within an event, save event-specific forms for future reuse, and configure forms for registrations, waivers, surveys, attendance tracking, and more.
+        </p>
+        <p>
+          Throughout the design process, I focused on reducing setup time while preserving flexibility, ensuring the experience could scale from simple RSVP forms to more complex registration workflows.
+        </p>
+
+        <div class="media-group">
+          <figure class="case-media">
+            <video controls preload="metadata">
+              <source src="form-builder-design-iteration.mp4" type="video/mp4" />
+              <source src="form-builder-design-iteration.mov" type="video/quicktime" />
+              Your browser does not support the video tag.
+            </video>
+          </figure>
+        </div>
+
+        <div class="media-group">
+          <h4>Form Settings</h4>
+          <div class="media-row">
+            <figure class="case-media">
+              <img src="form-builder-settings-1.png" alt="Form settings screen one" loading="lazy" />
+            </figure>
+            <figure class="case-media">
+              <img src="form-builder-settings-2.png" alt="Form settings screen two" loading="lazy" />
+            </figure>
+            <figure class="case-media">
+              <img src="form-builder-settings-3.png" alt="Form settings screen three" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+
+        <div class="media-group">
+          <h4>Create Form</h4>
+          <div class="media-row">
+            <figure class="case-media">
+              <img src="form-builder-create-1.png" alt="Create form flow screen one" loading="lazy" />
+            </figure>
+            <figure class="case-media">
+              <img src="form-builder-create-2.png" alt="Create form flow screen two" loading="lazy" />
+            </figure>
+            <figure class="case-media">
+              <img src="form-builder-create-3.png" alt="Create form flow screen three" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+
+        <div class="media-group">
+          <h4>Form Responses</h4>
+          <div class="media-row">
+            <figure class="case-media">
+              <img src="form-builder-responses-1.png" alt="Form responses screen one" loading="lazy" />
+            </figure>
+            <figure class="case-media">
+              <img src="form-builder-responses-2.png" alt="Form responses screen two" loading="lazy" />
+            </figure>
+            <figure class="case-media">
+              <img src="form-builder-responses-3.png" alt="Form responses screen three" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Outcome</h2>
+        <p>
+          The Form Builder transformed information collection from a disconnected process into a native part of event management.
+        </p>
+        <p>
+          Schools could create forms once, reuse them across events, and standardize common workflows without sacrificing customization.
+        </p>
+        <p>
+          By combining pre-built templates, reusable organization templates, and event-level form creation, the final solution supported both efficiency and flexibility, allowing administrators to spend less time rebuilding forms and more time managing successful events.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; built by <strong>Saylor Fuller</strong> · <span id="year"></span></p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

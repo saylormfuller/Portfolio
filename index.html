@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saylor Fuller — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Inter for body, Playfair Display for headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SF</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
+            <!-- LinkedIn SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hi, I'm</p>
+      <h1 class="hero-name">Saylor Fuller</h1>
+      <h2 class="hero-title">
+        <span class="typed-text" id="typed"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-sub">
+        I design thoughtful digital products through research-led UX, polished UI systems, and seamless interaction flows.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <!-- Decorative floating shapes -->
+    <div class="hero-bg">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <a href="#projects" class="scroll-down" aria-label="Scroll down">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </a>
+  </section>
+
+
+    <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">Projects</div>
+      <h2 class="section-heading">Selected UX/UI work</h2>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-img">
+            <img src="project2.png" alt="Vega External Rental Feature" onerror="this.parentElement.classList.add('img-missing')" />
+            <div class="project-img-placeholder">External Rental Feature</div>
+          </div>
+          <div class="project-body">
+            <h3>External Rental Feature</h3>
+            <p>Designed an end-to-end External Rentals experience for Vega Events that centralizes pricing, payments, insurance, waivers, and staff task management while supporting renter self-service.</p>
+            <div class="project-links">
+              <a href="case-study-rental.html" class="btn btn-sm btn-primary btn-full">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img">
+            <img src="project1.png" alt="Vega Form Builder Feature" onerror="this.parentElement.classList.add('img-missing')" />
+            <div class="project-img-placeholder">Form Builder Feature</div>
+          </div>
+          <div class="project-body">
+            <h3>Form Builder Feature</h3>
+            <p>Designed a flexible Form Builder for Vega Events that supports pre-built templates, saved custom templates, and in-event form creation for registrations, permission slips, and attendance.</p>
+            <div class="project-links">
+              <a href="case-study-form-builder.html" class="btn btn-sm btn-primary btn-full">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img">
+            <img src="project-reserved-seating.png" alt="Vega Reserved Seating Feature" onerror="this.parentElement.classList.add('img-missing')" />
+            <div class="project-img-placeholder">Reserved Seating Feature</div>
+          </div>
+          <div class="project-body">
+            <h3>Reserved Seating Feature</h3>
+            <p>Designed a Reserved Seating experience for Vega Events by integrating Seats.io into the existing ticketing workflow while preserving familiar patterns for a seamless user transition.</p>
+            <div class="project-links">
+              <a href="case-study-reserved-seating.html" class="btn btn-sm btn-primary btn-full">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img">
+            <img src="project3.png" alt="Vega Cart & Checkout Functionality" onerror="this.parentElement.classList.add('img-missing')" />
+            <div class="project-img-placeholder">Cart & Checkout Functionality</div>
+          </div>
+          <div class="project-body">
+            <h3>Cart & Checkout Functionality</h3>
+            <p>Designed a Cart & Checkout experience that made it easy for families to buy tickets for multiple student events while clearly communicating multi-school purchase limitations.</p>
+            <div class="project-links">
+              <a href="case-study-checkout.html" class="btn btn-sm btn-primary btn-full">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img">
+            <img src="project4.png" alt="Nu Skin Analytics Dashboard Feature" onerror="this.parentElement.classList.add('img-missing')" />
+            <div class="project-img-placeholder">Analytics Dashboard Feature</div>
+          </div>
+          <div class="project-body">
+            <h3>Analytics Dashboard Feature</h3>
+            <p>Designed an Analytics Dashboard for Nu Skin affiliates that consolidates key metrics and highlights trends in offers, sign-up invites, and referrals in one easy-to-understand view.</p>
+            <div class="project-links">
+              <a href="case-study-analytics.html" class="btn btn-sm btn-primary btn-full">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img">
+            <img src="project5.png" alt="Stela Onboarding" onerror="this.parentElement.classList.add('img-missing')" />
+            <div class="project-img-placeholder">Stela Onboarding</div>
+          </div>
+          <div class="project-body">
+            <h3>Stela Onboarding</h3>
+            <p>Designed an onboarding experience within the Stela app that helps new affiliates take their first steps toward earning income through structured resources and actionable guidance.</p>
+            <div class="project-links">
+              <a href="case-study-onboarding.html" class="btn btn-sm btn-primary btn-full">Case Study</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2 class="section-heading">Let's work together</h2>
+      <p class="contact-sub">
+        Interested in UX/UI design, product strategy, or research-led interface improvements?
+        I’m available for freelance and full-time design opportunities.
+      </p>
+      <div class="contact-grid">
+        <!-- Info column -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:saylormfuller@gmail.com">saylormfuller@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+            <a class="linkedin-line" href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener">LinkedIn: saylor-fuller</a>
+          </div>
+        </div>
+        <!-- Form column -->
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+              <span class="form-error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+              <span class="form-error" id="email-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" hidden>Sending…</span>
+          </button>
+          <p class="form-success" id="form-success" hidden>
+            ✓ Message sent! I'll get back to you soon.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; built by <strong>Saylor Fuller</strong> · <span id="year"></span></p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

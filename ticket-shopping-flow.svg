@@ -1,0 +1,30 @@
+<svg width="480" height="444" viewBox="0 0 480 444" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Ticket Shopping Flow</title>
+  <desc>A flowchart showing the 5-step ticket shopping process</desc>
+
+  <rect x="0" y="0" width="480" height="444" rx="16" fill="#FEF3DC"/>
+  <text x="36" y="44" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#2C2C2A">Ticket Shopping Flow</text>
+
+  <rect x="36" y="60" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="89" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Browse Events</text>
+  <line x1="240" y1="108" x2="240" y2="121" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="234,121 246,121 240,133" fill="#6B67C4"/>
+
+  <rect x="36" y="136" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="165" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Select Tickets</text>
+  <line x1="240" y1="184" x2="240" y2="197" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="234,197 246,197 240,209" fill="#6B67C4"/>
+
+  <rect x="36" y="212" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="241" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Add to Cart</text>
+  <line x1="240" y1="260" x2="240" y2="273" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="234,273 246,273 240,285" fill="#6B67C4"/>
+
+  <rect x="36" y="288" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="317" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Continue Shopping</text>
+  <line x1="240" y1="336" x2="240" y2="349" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="234,349 246,349 240,361" fill="#6B67C4"/>
+
+  <rect x="36" y="364" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="393" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Review Cart</text>
+</svg>

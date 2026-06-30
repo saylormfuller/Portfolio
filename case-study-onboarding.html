@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stela Onboarding — Case Study | Saylor Fuller</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    .case-study-header {
+      padding: 80px 0 40px;
+      background: var(--bg);
+    }
+    .case-study-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .case-study-intro {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+    .case-study-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .meta-item h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .meta-item p {
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .case-study-section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .case-study-section:last-of-type {
+      border-bottom: none;
+    }
+    .case-study-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: var(--text);
+      margin-bottom: 2rem;
+    }
+    .case-study-section p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+    .insights-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0;
+      max-width: 800px;
+    }
+    .insights-list li {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 0.4rem;
+    }
+    .image-placeholder {
+      background: var(--bg-2);
+      border: 2px dashed var(--border);
+      border-radius: var(--radius-lg);
+      padding: 120px 40px;
+      text-align: center;
+      color: var(--text-muted);
+      margin: 3rem 0;
+      font-size: 1rem;
+    }
+    .case-media {
+      margin: 1.5rem 0 0.5rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+    }
+    .case-media.hero-callout {
+      margin-top: 2rem;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .case-media.section-callout {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .case-media.outcome-video {
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .case-media img,
+    .case-media video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .insight-quote {
+      margin: 1rem 0 0;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid var(--accent);
+      background: var(--bg-2);
+      border-radius: 8px;
+      color: var(--text);
+      font-style: italic;
+      line-height: 1.7;
+      max-width: 800px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      transition: all var(--transition);
+    }
+    .back-link:hover {
+      color: var(--accent2);
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SF</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="case-study-header">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">← Back to Projects</a>
+        <h1>Stela Onboarding</h1>
+        <p class="case-study-intro">
+          Designed an onboarding experience within the Stela app to help new affiliates take their first steps toward earning income.
+        </p>
+
+        <figure class="case-media hero-callout">
+          <img src="stela-heading.png" alt="Stela onboarding heading visual featuring mobile product offer screens" loading="lazy" />
+        </figure>
+
+        <div class="case-study-meta">
+          <div class="meta-item">
+            <h3>Company</h3>
+            <p>Nu Skin</p>
+          </div>
+          <div class="meta-item">
+            <h3>Date</h3>
+            <p>Jul 2023 - Aug 2023</p>
+          </div>
+          <div class="meta-item">
+            <h3>Team</h3>
+            <p>Product Owners, Nu Skin Brand Affiliates, Customer Experience</p>
+          </div>
+          <div class="meta-item">
+            <h3>My Role</h3>
+            <p>UX/UI Designer and UX Researcher</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Overview</h2>
+        <p>
+          Nu Skin has traditionally relied on Brand Affiliates to onboard and train new members, leading to inconsistent guidance and lower early engagement.
+        </p>
+        <p>
+          During a company-wide UX Hackathon, I collaborated with Product, Customer Experience, and UX teams to design an onboarding experience within the Stela app that helps new affiliates take their first steps toward earning income.
+        </p>
+        <p>
+          By providing structured resources and actionable guidance, the feature supports users in reaching key early milestones and building long-term success.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>My Contributions</h2>
+        <div class="contributions-grid">
+          <div class="contribution-card">
+            <h3>UX Strategy</h3>
+            <p>Collaborated with Product Owners, Customer Experience, and UX peers to define a clear onboarding concept that addressed early affiliate engagement and training consistency.</p>
+          </div>
+          <div class="contribution-card">
+            <h3>Prototype Design</h3>
+            <p>Designed a high-fidelity onboarding flow in under a day, focusing on clarity, motivation, and actionable next steps for new affiliates.</p>
+          </div>
+          <div class="contribution-card">
+            <h3>User Validation</h3>
+            <p>Led in-person guerrilla testing and remote moderated usability sessions to validate the experience and identify areas for clearer guidance and coaching.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Process</h2>
+        <div class="process-list">
+          <div class="process-item">
+            <h3>Research & Discovery</h3>
+            <p>As part of a company-wide UX Hackathon, I collaborated with Product Owners, Customer Experience, and fellow designers to explore solutions for improving new affiliate onboarding. Through collaborative brainstorming and affinity mapping, we generated and prioritized ideas before selecting a concept to prototype and validate.</p>
+            <figure class="case-media section-callout">
+              <img src="stela-rd.png" alt="Affinity mapping and research notes from Stela onboarding discovery" loading="lazy" />
+            </figure>
+          </div>
+          <div class="process-item">
+            <h3>Design & Iteration</h3>
+            <p>Working alongside another UX Designer, I translated our ideas into a high-fidelity prototype within a single day. Our goal was to create an onboarding experience that was simple, actionable, and motivating, while incorporating small moments of delight to keep new users engaged.</p>
+            <figure class="case-media">
+              <img src="stela-flow.png" alt="Stela onboarding end-to-end flow screens" loading="lazy" />
+            </figure>
+          </div>
+          <div class="process-item">
+            <h3>Guerrilla Testing</h3>
+            <p>We tested the prototype in the Nu Skin headquarters lobby with Brand Affiliates attending a company event. Participants responded positively to the concept and immediately recognized the value of having guided onboarding within Stela.</p>
+            <figure class="case-media">
+              <img src="stela-testing.jpg" alt="In-person Stela onboarding testing session with affiliates" loading="lazy" />
+            </figure>
+          </div>
+          <div class="process-item">
+            <h3>Key Insights</h3>
+            <ul class="insights-list">
+              <li>Users were excited to see a dedicated onboarding experience.</li>
+              <li>Affiliates believed the feature would make training new recruits significantly easier.</li>
+              <li>Many wanted the ability to revisit onboarding content after completing it.</li>
+            </ul>
+          </div>
+          <div class="process-item">
+            <h3>Remote Usability Testing</h3>
+            <p>To validate the experience with first-time users, we conducted a moderated usability study through UserZoom. Participants completed onboarding tasks while thinking aloud and shared feedback on clarity and navigation.</p>
+          </div>
+          <div class="process-item">
+            <h3>Additional Insights</h3>
+            <p>Users found the onboarding flow intuitive and easy to navigate. Participants wanted additional context and coaching throughout the experience.</p>
+            <blockquote class="insight-quote">“A little more explanation on each page could be helpful. I was confused on the discount step, but a simple explanation would have made it make sense.” — New Brand Affiliate</blockquote>
+          </div>
+          <div class="process-item">
+            <h3>Final Iteration</h3>
+            <figure class="case-media outcome-video">
+              <video controls preload="metadata">
+                <source src="stela-onboarding-flow.mp4" type="video/mp4" />
+                <source src="stela-onboarding-flow.mov" type="video/quicktime" />
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Outcome</h2>
+        <p>Research showed that new affiliates needed ongoing guidance rather than a one-time onboarding flow. Based on our findings, we recommended a progressive onboarding experience that surfaces the next most valuable action at the right time: creating a product offer, inviting customers to Vera, and sharing a sign-up invite.</p>
+        <p>This approach reduces cognitive load, reinforces high-impact behaviors, and helps new affiliates build momentum toward their first earnings milestone.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; built by <strong>Saylor Fuller</strong> · <span id="year"></span></p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

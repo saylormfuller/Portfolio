@@ -1,0 +1,30 @@
+<svg width="480" height="420" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Form Creation Flow</title>
+  <desc>A flowchart showing the 5-step form creation process</desc>
+
+  <rect x="0" y="0" width="480" height="420" rx="16" fill="#FEF3DC"/>
+  <text x="36" y="44" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#2C2C2A">Form Creation Flow</text>
+
+  <rect x="36" y="68" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="97" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Create Form</text>
+  <line x1="240" y1="116" x2="240" y2="129" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="234,129 246,129 240,141" fill="#6B67C4"/>
+
+  <rect x="36" y="144" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="173" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Add Fields</text>
+  <line x1="240" y1="192" x2="240" y2="205" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="234,205 246,205 240,217" fill="#6B67C4"/>
+
+  <rect x="36" y="220" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="249" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Configure Settings</text>
+  <line x1="240" y1="268" x2="240" y2="281" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="234,281 246,281 240,293" fill="#6B67C4"/>
+
+  <rect x="36" y="296" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="325" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Save Form</text>
+  <line x1="240" y1="344" x2="240" y2="357" stroke="#6B67C4" stroke-width="1.5"/>
+  <polygon points="234,357 246,357 240,369" fill="#6B67C4"/>
+
+  <rect x="36" y="372" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="401" font-family="Georgia, serif" font-size="14.5" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Choose: Event Only or Save as Template</text>
+</svg>

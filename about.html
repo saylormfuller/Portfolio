@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Saylor Fuller — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Inter for body, Playfair Display for headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SF</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
+            <!-- LinkedIn SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section id="about" style="padding-top: 100px;">
+    <div class="container">
+      <div class="section-label">About Me</div>
+      <div class="about-grid">
+        <div class="about-photo">
+          <div class="photo-frame">
+            <img src="about-me.jpg" alt="Saylor Fuller" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="photo-placeholder">
+              <span>Your Photo Here</span>
+            </div>
+          </div>
+          <div class="photo-accent"></div>
+        </div>
+        <div class="about-text">
+          <h2>A little about me</h2>
+          <p>
+            I'm a UX/UI designer who combines user-centered design with strategic business thinking to create products that people love to use. I specialize in designing end-to-end experiences, translating research insights into intuitive interfaces, scalable systems, and impactful product features.
+          </p>
+          <p>
+            I graduated from the BYU Marriott School of Business with a degree in Experience Design and Management. I've worked across both global organizations and early-stage startups, partnering with cross-functional teams to design solutions that balance user needs with business goals.
+          </p>
+          <p>
+            From discovery and research to prototyping and launch, I've led the design of new features from concept through implementation, helping teams solve complex problems and deliver meaningful value to both users and the business.
+          </p>
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem;">Design Skills</h3>
+          <div class="skills">
+            <span class="skill-chip">UX Research</span>
+            <span class="skill-chip">UI Design</span>
+            <span class="skill-chip">Interaction Design</span>
+            <span class="skill-chip">Design Systems</span>
+            <span class="skill-chip">Figma</span>
+            <span class="skill-chip">Adobe Illustrator</span>
+            <span class="skill-chip">Adobe Photoshop</span>
+            <span class="skill-chip">Usability Testing</span>
+            <span class="skill-chip">User Research</span>
+            <span class="skill-chip">Prototyping</span>
+          </div>
+          <a href="resume.pdf" class="btn btn-primary" download style="margin-top: 1.5rem;">Download Résumé</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; built by <strong>Saylor Fuller</strong> · <span id="year"></span></p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

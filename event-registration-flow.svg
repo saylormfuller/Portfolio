@@ -1,0 +1,37 @@
+<svg width="480" height="444" viewBox="0 0 480 444" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Event Registration Flow</title>
+  <desc>A flowchart showing the 5-step event registration process</desc>
+
+  <rect x="0" y="0" width="480" height="444" rx="16" fill="#FEF3DC"/>
+
+  <text x="36" y="44" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#2C2C2A">Event Registration Flow</text>
+
+  <rect x="36" y="68" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="97" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Create Event</text>
+
+  <line x1="240" y1="116" x2="240" y2="142" stroke="#6B67C4" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <rect x="36" y="142" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="171" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Enable Registration Add-On</text>
+
+  <line x1="240" y1="190" x2="240" y2="216" stroke="#6B67C4" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <rect x="36" y="216" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="245" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Attach Form</text>
+
+  <line x1="240" y1="264" x2="240" y2="290" stroke="#6B67C4" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <rect x="36" y="290" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="319" font-family="Georgia, serif" font-size="14" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Choose: Pre-Built Template, Saved Template, or New Form</text>
+
+  <line x1="240" y1="338" x2="240" y2="364" stroke="#6B67C4" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <rect x="36" y="364" width="408" height="48" rx="10" fill="#FEF3DC" stroke="#D3CDB8" stroke-width="1.2"/>
+  <text x="240" y="393" font-family="Georgia, serif" font-size="15" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">Publish Event</text>
+
+  <defs>
+    <marker id="arr1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9Z" fill="#6B67C4"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserved Seating Feature — Case Study | Saylor Fuller</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    .case-study-header {
+      padding: 80px 0 40px;
+      background: var(--bg);
+    }
+    .case-study-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .case-study-intro {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+    
+    .case-study-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .meta-item h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .meta-item p {
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .case-study-section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .case-study-section:last-of-type {
+      border-bottom: none;
+    }
+    .case-study-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: var(--text);
+      margin-bottom: 2rem;
+    }
+    .case-study-section h3 {
+      color: var(--text);
+      font-size: 1.25rem;
+      margin: 2rem 0 0.75rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .case-study-section h4 {
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .case-study-section p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+    .insights-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0 0 1.5rem;
+      max-width: 800px;
+    }
+    .insights-list li {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 0.4rem;
+    }
+
+    .image-placeholder {
+      background: var(--bg-2);
+      border: 2px dashed var(--border);
+      border-radius: var(--radius-lg);
+      padding: 120px 40px;
+      text-align: center;
+      color: var(--text-muted);
+      margin: 3rem 0;
+      font-size: 1rem;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .process-step {
+      padding: 2rem;
+      background: var(--bg-2);
+      border-radius: var(--radius-lg);
+    }
+    .process-step h3 {
+      color: var(--text);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-family: "Inter", var(--font-sans), sans-serif;
+      font-weight: 700;
+    }
+    .process-step p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .flow-grid.single-diagram {
+      grid-template-columns: minmax(280px, 760px);
+      justify-content: center;
+    }
+    .flow-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+    .flow-card.compact {
+      padding: 1rem;
+    }
+    .flow-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    .flow-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .flow-steps li {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    .flow-steps li + li::before {
+      content: "↓";
+      display: block;
+      color: var(--accent);
+      margin: 0.25rem 0;
+    }
+
+    .case-media {
+      margin: 1.5rem 0 0.5rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-2);
+    }
+    .case-media img,
+    .case-media video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .desktop-frame {
+      max-width: 1040px;
+      margin: 2rem auto 0.5rem;
+      border-radius: 14px;
+      border: 1px solid #2f3344;
+      background: #0f1320;
+      padding: 0.75rem;
+      box-shadow: 0 16px 36px rgba(14, 17, 29, 0.35);
+    }
+    .desktop-frame-top {
+      height: 24px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #1f2640 0%, #171d31 100%);
+      border: 1px solid #303a58;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0 0.6rem;
+    }
+    .desktop-frame-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #8f97b8;
+      opacity: 0.9;
+    }
+    .desktop-frame-screen {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #2f3344;
+      background: #0b0f1b;
+    }
+
+    .settings-compare {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      max-width: 1100px;
+    }
+    .compare-arrow {
+      color: var(--accent);
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 700;
+      padding: 0 0.25rem;
+      transform: translateY(-6px);
+    }
+    .media-caption {
+      margin: 0.6rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .opportunity-video {
+      max-width: 960px;
+      margin-top: 1.25rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      transition: all var(--transition);
+    }
+    .back-link:hover {
+      color: var(--accent2);
+    }
+
+    @media (max-width: 900px) {
+      .settings-compare {
+        grid-template-columns: 1fr;
+      }
+      .compare-arrow {
+        text-align: center;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SF</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="case-study-header">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">← Back to Projects</a>
+        <h1>Reserved Seating Feature</h1>
+        <p class="case-study-intro">
+          Designed a Reserved Seating experience for Vega Events by integrating Seats.io while preserving familiar patterns from the general admission workflow.
+        </p>
+
+        <div class="desktop-frame">
+          <div class="desktop-frame-top" aria-hidden="true">
+            <span class="desktop-frame-dot"></span>
+            <span class="desktop-frame-dot"></span>
+            <span class="desktop-frame-dot"></span>
+          </div>
+          <figure class="case-media desktop-frame-screen">
+            <img src="reserved-seating-header.png" alt="Reserved Seating header view displayed in a desktop-style frame" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="case-study-meta">
+          <div class="meta-item">
+            <h3>Company</h3>
+            <p>Vega Events</p>
+          </div>
+          <div class="meta-item">
+            <h3>Date</h3>
+            <p>Jan 2026 - Feb 2026</p>
+          </div>
+          <div class="meta-item">
+            <h3>Team</h3>
+            <p>Chief Executive Officer, Chief Product Officer, Software Development, QA Development</p>
+          </div>
+          <div class="meta-item">
+            <h3>My Role</h3>
+            <p>Product Strategy, UX/UI Product Design, UX Researcher</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Overview</h2>
+        <p>
+          Vega's ticketing platform initially supported only general admission events, limiting schools that needed reserved seating for performances, graduations, and other assigned-seat events. I designed a Reserved Seating experience by integrating the Seats.io platform into Vega's existing ticketing workflow while navigating complex technical constraints.
+        </p>
+        <p>
+          By preserving familiar patterns from the general admission experience, the feature enabled schools to adopt reserved seating with minimal learning curve and a seamless transition.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Problem</h2>
+        <p>
+          Vega's ticketing platform was originally built for General Admission events, leaving schools without a native way to manage reserved seating.
+        </p>
+        <p>
+          As schools hosted concerts, theater productions, graduations, and other assigned-seat events, they relied on fragmented workflows or third-party tools to create seating charts, reserve seats, and manage ticket pricing. The challenge was to introduce reserved seating without disrupting the familiar ticketing experience schools already relied on.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Solution</h2>
+        <p>
+          I designed an end-to-end Reserved Seating experience by integrating Seats.io into Vega's existing ticketing workflow.
+        </p>
+        <p>
+          The solution enables schools to create and manage seat maps, assign multiple ticket types and pricing tiers, reserve seats for designated groups, and manage seat availability while preserving the familiar workflows administrators already knew.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Process</h2>
+        <h3>Research & Discovery</h3>
+        <p>
+          I partnered with stakeholders and interviewed school administrators to better understand how they managed reserved seating events. While every school approached the problem differently, consistent patterns emerged around the flexibility they needed to manage complex seating arrangements.
+        </p>
+
+        <h3>Key Insights</h3>
+        <ul class="insights-list">
+          <li>Schools needed to create and manage custom seat maps.</li>
+          <li>Reserved seating often required multiple pricing tiers and ticket types.</li>
+          <li>Administrators needed to reserve or block seats for groups such as staff, media, performers, and families.</li>
+          <li>Existing workflows relied on multiple disconnected tools, creating unnecessary complexity.</li>
+        </ul>
+        <p>
+          These conversations revealed an opportunity to expand Vega's ticketing platform beyond General Admission while keeping the experience approachable for existing customers.
+        </p>
+
+        <h3>Opportunity</h3>
+        <p>
+          Rather than building a completely separate reserved seating product, I explored how reserved seating could become a natural extension of Vega's existing ticketing workflow.
+        </p>
+        <p>
+          The primary design challenge wasn't creating seating charts, it was integrating a third-party platform (Seats.io) into an established product without forcing users to learn an entirely new system.
+        </p>
+        <p>
+          My guiding principle became: Add new capabilities without introducing a new mental model.
+        </p>
+        <figure class="case-media opportunity-video">
+          <video controls preload="metadata">
+            <source src="reserved-seating-seat-manager.mp4" type="video/mp4" />
+            <source src="reserved-seating-seat-manager.mov" type="video/quicktime" />
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+
+        <h3>User Flows</h3>
+        <p>
+          To guide the interaction model, I mapped the reserved seating ecosystem to show how three core areas, seat maps, ticket pricing, and seat management, connect and converge into a published ticketed event.
+        </p>
+        <div class="flow-grid single-diagram">
+          <div class="flow-card compact">
+            <img src="ecosystem-diagramming.svg" alt="Ecosystem Diagramming flowchart" loading="lazy" />
+          </div>
+        </div>
+        <p>
+          This diagram helped align product and engineering on how multiple configuration paths should feed one clear publishing outcome without increasing cognitive load.
+        </p>
+
+        <h3>Design & Iteration</h3>
+        <p>
+          Because Seats.io introduced technical constraints around seat map creation and management, I worked closely with Product and Engineering to understand what functionality could be exposed within Vega.
+        </p>
+        <p>
+          Rather than exposing the complexity of the integration, I designed a lightweight Reserved Seating settings panel that fit seamlessly within Vega's existing ticketing configuration.
+        </p>
+        <p>
+          Administrators could easily enable reserved seating, select or create a seat map, configure ticket pricing, manage seat availability, and reserve seats for specific groups.
+        </p>
+        <p>
+          Throughout the design process, I prioritized consistency with the General Admission experience so users could adopt the new feature with minimal learning curve.
+        </p>
+        <div class="settings-compare">
+          <figure class="case-media">
+            <img src="reserved-seating-general-admission-settings.png" alt="General Admission settings screen" loading="lazy" />
+            <figcaption class="media-caption">General Admission Settings</figcaption>
+          </figure>
+          <div class="compare-arrow" aria-hidden="true">→</div>
+          <figure class="case-media">
+            <img src="reserved-seating-settings.png" alt="Reserved Seating settings screen" loading="lazy" />
+            <figcaption class="media-caption">Reserved Seating Settings</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2>Outcome</h2>
+        <p>
+          The Reserved Seating feature expanded Vega's ticketing capabilities to support a much broader range of school events while maintaining a familiar administrative experience.
+        </p>
+        <p>
+          By integrating Seats.io into existing workflows, schools gained powerful seating management tools without sacrificing usability.
+        </p>
+        <p>
+          The project reinforced the importance of designing around technical constraints rather than exposing them to users. Instead of introducing an entirely new workflow, the final solution extended an existing one, allowing administrators to accomplish more while interacting with an interface they already understood.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; built by <strong>Saylor Fuller</strong> · <span id="year"></span></p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
