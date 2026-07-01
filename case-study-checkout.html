@@ -460,50 +460,6 @@
     </div>
   </footer>
 
-  <div class="lightbox" id="image-lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightbox-close" aria-label="Close image overlay">×</button>
-    <img id="lightbox-image" src="" alt="Expanded case study image" />
-  </div>
-
   <script src="script.js"></script>
-  <script>
-    (function () {
-      const lightbox = document.getElementById("image-lightbox");
-      const lightboxImage = document.getElementById("lightbox-image");
-      const closeButton = document.getElementById("lightbox-close");
-      const zoomableImages = document.querySelectorAll(".zoomable");
-
-      if (!lightbox || !lightboxImage || !closeButton || !zoomableImages.length) {
-        return;
-      }
-
-      function closeLightbox() {
-        lightbox.classList.remove("is-open");
-        lightbox.setAttribute("aria-hidden", "true");
-        lightboxImage.src = "";
-      }
-
-      zoomableImages.forEach((img) => {
-        img.addEventListener("click", function () {
-          lightboxImage.src = this.src;
-          lightboxImage.alt = this.alt || "Expanded case study image";
-          lightbox.classList.add("is-open");
-          lightbox.setAttribute("aria-hidden", "false");
-        });
-      });
-
-      closeButton.addEventListener("click", closeLightbox);
-      lightbox.addEventListener("click", function (event) {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
-          closeLightbox();
-        }
-      });
-    })();
-  </script>
 </body>
 </html>

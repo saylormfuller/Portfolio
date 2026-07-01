@@ -246,6 +246,33 @@
       max-width: 960px;
       margin-top: 1.25rem;
     }
+    .solution-callout {
+      max-width: 980px;
+      margin-top: 1.25rem;
+    }
+    .desktop-frame.solution-frame {
+      max-width: 980px;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .findings-embed {
+      max-width: 980px;
+      margin-top: 1rem;
+    }
+    .findings-embed iframe {
+      display: block;
+      width: 100%;
+      height: 310px;
+      border: 0;
+      background: transparent;
+    }
+    .mockup-callout {
+      max-width: 980px;
+      margin-top: 1.25rem;
+    }
+    .mockup-callout.final-mockup {
+      margin-bottom: 2rem;
+    }
 
     .back-link {
       display: inline-flex;
@@ -308,7 +335,11 @@
             <span class="desktop-frame-dot"></span>
           </div>
           <figure class="case-media desktop-frame-screen">
-            <img src="reserved-seating-header.png" alt="Reserved Seating header view displayed in a desktop-style frame" loading="lazy" />
+            <video controls preload="metadata">
+              <source src="reserved-seating-seat-manager.mp4" type="video/mp4" />
+              <source src="reserved-seating-seat-manager.mov" type="video/quicktime" />
+              Your browser does not support the video tag.
+            </video>
           </figure>
         </div>
 
@@ -366,18 +397,28 @@
         <p>
           The solution enables schools to create and manage seat maps, assign multiple ticket types and pricing tiers, reserve seats for designated groups, and manage seat availability while preserving the familiar workflows administrators already knew.
         </p>
+        <div class="desktop-frame solution-frame">
+          <div class="desktop-frame-top" aria-hidden="true">
+            <span class="desktop-frame-dot"></span>
+            <span class="desktop-frame-dot"></span>
+            <span class="desktop-frame-dot"></span>
+          </div>
+          <figure class="case-media desktop-frame-screen">
+            <img src="reserved-seating-header.png" alt="Reserved Seating settings and seat map header view" loading="lazy" />
+          </figure>
+        </div>
       </div>
     </section>
 
     <section class="case-study-section">
       <div class="container">
         <h2>Process</h2>
-        <h3>Research & Discovery</h3>
+        <h3>Interviews</h3>
         <p>
           I partnered with stakeholders and interviewed school administrators to better understand how they managed reserved seating events. While every school approached the problem differently, consistent patterns emerged around the flexibility they needed to manage complex seating arrangements.
         </p>
 
-        <h3>Key Insights</h3>
+        <h4>Key Insights</h4>
         <ul class="insights-list">
           <li>Schools needed to create and manage custom seat maps.</li>
           <li>Reserved seating often required multiple pricing tiers and ticket types.</li>
@@ -387,24 +428,6 @@
         <p>
           These conversations revealed an opportunity to expand Vega's ticketing platform beyond General Admission while keeping the experience approachable for existing customers.
         </p>
-
-        <h3>Opportunity</h3>
-        <p>
-          Rather than building a completely separate reserved seating product, I explored how reserved seating could become a natural extension of Vega's existing ticketing workflow.
-        </p>
-        <p>
-          The primary design challenge wasn't creating seating charts, it was integrating a third-party platform (Seats.io) into an established product without forcing users to learn an entirely new system.
-        </p>
-        <p>
-          My guiding principle became: Add new capabilities without introducing a new mental model.
-        </p>
-        <figure class="case-media opportunity-video">
-          <video controls preload="metadata">
-            <source src="reserved-seating-seat-manager.mp4" type="video/mp4" />
-            <source src="reserved-seating-seat-manager.mov" type="video/quicktime" />
-            Your browser does not support the video tag.
-          </video>
-        </figure>
 
         <h3>User Flows</h3>
         <p>
@@ -419,6 +442,28 @@
           This diagram helped align product and engineering on how multiple configuration paths should feed one clear publishing outcome without increasing cognitive load.
         </p>
 
+        <h3>Opportunity</h3>
+        <p>
+          Rather than building a completely separate reserved seating product, I explored how reserved seating could become a natural extension of Vega's existing ticketing workflow.
+        </p>
+        <p>
+          The primary design challenge wasn't creating seating charts, it was integrating a third-party platform (Seats.io) into an established product without forcing users to learn an entirely new system.
+        </p>
+        <p>
+          My guiding principle became: Add new capabilities without introducing a new mental model.
+        </p>
+        <figure class="case-media mockup-callout">
+          <img src="reserved-seating-first-mockup.png" alt="First reserved seating mockup with annotated usability observations" loading="lazy" />
+        </figure>
+
+        <h3>Usability Testing</h3>
+        <p>
+          I led a team of six university interns in conducting usability tests for Vega. I designed the test plan, wrote the surveys, and created all participant instructions, then met with the students weekly to review findings and synthesize insights about discoverability, clarity, and confidence within the reserved seating workflow.
+        </p>
+        <div class="findings-embed">
+          <iframe src="reserved-seating-usability-findings.html" title="Reserved Seating usability test findings"></iframe>
+        </div>
+
         <h3>Design & Iteration</h3>
         <p>
           Because Seats.io introduced technical constraints around seat map creation and management, I worked closely with Product and Engineering to understand what functionality could be exposed within Vega.
@@ -429,6 +474,9 @@
         <p>
           Administrators could easily enable reserved seating, select or create a seat map, configure ticket pricing, manage seat availability, and reserve seats for specific groups.
         </p>
+        <figure class="case-media mockup-callout final-mockup">
+          <img src="reserved-seating-final-mockup.png" alt="Final reserved seating mockup with refined usability annotations" loading="lazy" />
+        </figure>
         <p>
           Throughout the design process, I prioritized consistency with the General Admission experience so users could adopt the new feature with minimal learning curve.
         </p>
@@ -443,6 +491,11 @@
             <figcaption class="media-caption">Reserved Seating Settings</figcaption>
           </figure>
         </div>
+        <ul class="insights-list">
+          <li>I intentionally mirrored the General Admission structure and patterns inside Reserved Seating settings.</li>
+          <li>Keeping labels, controls, and page flow familiar helped users transfer prior knowledge instead of relearning navigation.</li>
+          <li>This consistency reduced cognitive load and made adoption of the new feature feel intuitive from day one.</li>
+        </ul>
       </div>
     </section>
 

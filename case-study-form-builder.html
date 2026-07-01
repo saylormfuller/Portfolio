@@ -215,6 +215,25 @@
       border: 1px solid #2f3344;
       background: #0b0f1b;
     }
+    .desktop-frame.solution-frame {
+      max-width: 1040px;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .solution-media-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.25rem;
+      max-width: 1040px;
+    }
+    .solution-media-row img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
 
     .media-row {
       display: grid;
@@ -232,6 +251,18 @@
       font-size: 1rem;
       font-family: "Inter", var(--font-sans), sans-serif;
       font-weight: 700;
+    }
+
+    .findings-embed {
+      max-width: 980px;
+      margin-top: 1rem;
+    }
+    .findings-embed iframe {
+      display: block;
+      width: 100%;
+      height: 310px;
+      border: 0;
+      background: transparent;
     }
 
     .back-link {
@@ -252,9 +283,15 @@
       .media-row {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+      .solution-media-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
     @media (max-width: 700px) {
       .media-row {
+        grid-template-columns: 1fr;
+      }
+      .solution-media-row {
         grid-template-columns: 1fr;
       }
     }
@@ -301,7 +338,11 @@
             <span class="desktop-frame-dot"></span>
           </div>
           <figure class="case-media desktop-frame-screen">
-            <img src="form-builder-forms-header.png" alt="Form Builder header view displayed in a desktop-style frame" loading="lazy" />
+            <video controls preload="metadata">
+              <source src="form-builder-design-iteration.mp4" type="video/mp4" />
+              <source src="form-builder-design-iteration.mov" type="video/quicktime" />
+              Your browser does not support the video tag.
+            </video>
           </figure>
         </div>
 
@@ -359,13 +400,18 @@
         <p>
           Users can start from pre-built templates, create organization-wide templates, or build forms directly within an event and save them for future use. The result is a centralized system that streamlines data collection while reducing repetitive administrative work.
         </p>
+        <div class="solution-media-row">
+          <img src="Case Study Content/Form Feature/Images/Form Settings Mockup.png" alt="Annotated Form Settings screen" loading="lazy" />
+          <img src="Case Study Content/Form Feature/Images/Create Form Mockup.png" alt="Annotated Create Form screen" loading="lazy" />
+          <img src="Case Study Content/Form Feature/Images/Form Response Mockup.png" alt="Annotated Form Responses screen" loading="lazy" />
+        </div>
       </div>
     </section>
 
     <section class="case-study-section">
       <div class="container">
         <h2>Process</h2>
-        <h3>Research & Discovery</h3>
+        <h3>Interviews</h3>
         <p>
           As Vega expanded its event management capabilities, we conducted customer interviews and analyzed common event workflows to better understand how schools collected information from attendees.
         </p>
@@ -385,17 +431,6 @@
           These findings revealed an opportunity to bring information collection directly into Vega's event management ecosystem.
         </p>
 
-        <h3>Opportunity</h3>
-        <p>
-          The challenge wasn't simply creating a form builder, it was designing a system that balanced customization with efficiency.
-        </p>
-        <p>
-          Some organizations wanted complete control over every field, while others preferred quick-start solutions that required little setup.
-        </p>
-        <p>
-          The design challenge became: How might we support highly customized forms while making common workflows fast and repeatable?
-        </p>
-
         <h3>User Flows</h3>
         <p>
           To understand where forms fit within the event creation process, I mapped the relationship between event setup, registration management, and form creation.
@@ -413,6 +448,47 @@
           Mapping these flows helped identify where templates could reduce repetitive work while still allowing customization when needed.
         </p>
 
+        <h3>Opportunity</h3>
+        <p>
+          The challenge wasn't simply creating a form builder, it was designing a system that balanced customization with efficiency.
+        </p>
+        <p>
+          Some organizations wanted complete control over every field, while others preferred quick-start solutions that required little setup.
+        </p>
+        <p>
+          The design challenge became: How might we support highly customized forms while making common workflows fast and repeatable?
+        </p>
+
+        <h3>Usability Testing</h3>
+        <p>
+          I led a team of 6 university interns to conduct usability tests for Vega. I designed the test plan, wrote the surveys, and created all participant instructions, then met weekly with the students to review their findings. For this feature, we conducted 2 usability tests: one focused on adding a form to an event, and another focused on creating a form from scratch.
+        </p>
+
+        <h4>Test 1: Adding a Form to an Event</h4>
+        <div class="findings-embed">
+          <iframe src="form-builder-usability-findings.html" title="Form Builder usability test findings"></iframe>
+        </div>
+        <h4>Key Findings</h4>
+        <ul class="insights-list">
+          <li><strong>High task completion:</strong> Most participants successfully completed the task once they found the correct workflow.</li>
+          <li><strong>Registration Add-on was hard to find:</strong> Nearly every participant struggled to locate the <strong>Registration Add-on</strong> before completing the task.</li>
+          <li><strong>Navigation caused confusion:</strong> Users frequently mistook the <strong>+</strong> button or <strong>Manage Access</strong> for the Registration Add-on.</li>
+          <li><strong>Users explored multiple paths:</strong> Many participants clicked through several tabs before finding the correct location.</li>
+          <li><strong>Positive overall experience:</strong> Despite the navigation challenges, participants consistently described the interface as clean, modern, and easy to use once they reached the workflow.</li>
+        </ul>
+
+        <h4>Test 2: Creating a Form from Scratch</h4>
+        <div class="findings-embed">
+          <iframe src="form-builder-usability-findings-test-2.html" title="Form Builder usability test findings for creating a form from scratch"></iframe>
+        </div>
+        <h4>Key Findings</h4>
+        <ul class="insights-list">
+          <li><strong>High task completion:</strong> All participants successfully completed the task, with an average completion time of just over <strong>2 minutes</strong>.</li>
+          <li><strong>Easy to learn:</strong> Most users quickly understood the workflow and completed the task with little or no assistance.</li>
+          <li><strong>Instructions caused minor confusion:</strong> Some participants were unsure whether they needed to enter content into the Short Answer fields or simply create the form.</li>
+          <li><strong>Small usability improvements identified:</strong> A few users hesitated when locating the <strong>Add Form</strong> or <strong>Save</strong> buttons and expected some elements to behave differently.</li>
+        </ul>
+
         <h3>Design & Iteration</h3>
         <p>
           To accommodate a wide range of use cases, I designed multiple entry points into the form-building experience.
@@ -423,16 +499,6 @@
         <p>
           Throughout the design process, I focused on reducing setup time while preserving flexibility, ensuring the experience could scale from simple RSVP forms to more complex registration workflows.
         </p>
-
-        <div class="media-group">
-          <figure class="case-media">
-            <video controls preload="metadata">
-              <source src="form-builder-design-iteration.mp4" type="video/mp4" />
-              <source src="form-builder-design-iteration.mov" type="video/quicktime" />
-              Your browser does not support the video tag.
-            </video>
-          </figure>
-        </div>
 
         <div class="media-group">
           <h4>Form Settings</h4>

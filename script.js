@@ -211,6 +211,96 @@ if (form && successMsg) {
 
 
 /* ============================================================
+   GLOBAL IMAGE LIGHTBOX — click supported content images to zoom
+   ============================================================ */
+function initImageLightbox() {
+  const isCaseStudyPage = window.location.pathname.includes('case-study-');
+  const imageSelector = isCaseStudyPage
+    ? 'main img'
+    : [
+        '.case-media img',
+        '.flow-card img',
+        '.media-row img',
+        '.media-pair img',
+        '.media-stack img',
+        '.desktop-frame-screen img',
+        '.settings-compare img',
+        '.project-img img'
+      ].join(', ');
+
+  const images = document.querySelectorAll(imageSelector);
+  if (!images.length) return;
+
+  images.forEach(img => {
+    if (!img.closest('a, button')) {
+      img.classList.add('image-zoomable');
+    }
+  });
+
+  let lightbox = document.getElementById('global-lightbox');
+  let lightboxImage = document.getElementById('global-lightbox-image');
+  let closeButton = document.getElementById('global-lightbox-close');
+
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'global-lightbox';
+    lightbox.className = 'global-lightbox';
+    lightbox.setAttribute('aria-hidden', 'true');
+
+    closeButton = document.createElement('button');
+    closeButton.id = 'global-lightbox-close';
+    closeButton.className = 'global-lightbox-close';
+    closeButton.setAttribute('aria-label', 'Close image overlay');
+    closeButton.textContent = '×';
+
+    lightboxImage = document.createElement('img');
+    lightboxImage.id = 'global-lightbox-image';
+    lightboxImage.alt = 'Expanded image';
+
+    lightbox.appendChild(closeButton);
+    lightbox.appendChild(lightboxImage);
+    document.body.appendChild(lightbox);
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImage.src = '';
+  }
+
+  document.addEventListener('click', event => {
+    const targetImage = event.target.closest(imageSelector);
+    if (!targetImage) return;
+    if (targetImage.closest('#global-lightbox')) return;
+    if (targetImage.closest('a, button')) return;
+    if (targetImage.dataset.noLightbox === 'true') return;
+
+    lightboxImage.src = targetImage.currentSrc || targetImage.src;
+    lightboxImage.alt = targetImage.alt || 'Expanded image';
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+}
+
+initImageLightbox();
+
+
+/* ============================================================
    FOOTER YEAR
    ============================================================ */
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}

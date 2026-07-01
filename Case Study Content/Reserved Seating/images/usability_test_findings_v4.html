@@ -1,0 +1,117 @@
+
+<style>
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.stat-card{border-radius:10px;padding:16px 20px;display:flex;flex-direction:column;gap:4px}
+.stat-top{display:flex;align-items:center;gap:14px}
+.stat-icon{width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.stat-num{display:flex;align-items:baseline;gap:6px}
+.big{font-size:36px;font-weight:700;line-height:1}
+.denom{font-size:16px;font-weight:400;line-height:1}
+.stat-label{font-size:13px;font-weight:500}
+.stat-sub{font-size:12px}
+.c-purple-card{background:#EEEDFE;border:0.5px solid #AFA9EC}
+.c-purple-card .big{color:#3C3489}.c-purple-card .denom{color:#534AB7}.c-purple-card .stat-label{color:#26215C}.c-purple-card .stat-sub{color:#534AB7}.c-purple-card svg{stroke:#3C3489}
+.c-teal-card{background:#E1F5EE;border:0.5px solid #5DCAA5}
+.c-teal-card .big{color:#085041}.c-teal-card .denom{color:#0F6E56}.c-teal-card .stat-label{color:#04342C}.c-teal-card .stat-sub{color:#0F6E56}.c-teal-card svg{stroke:#085041}
+.c-blue-card{background:#E6F1FB;border:0.5px solid #85B7EB}
+.c-blue-card .big{color:#0C447C}.c-blue-card .denom{color:#185FA5}.c-blue-card .stat-label{color:#042C53}.c-blue-card .stat-sub{color:#185FA5}.c-blue-card svg{stroke:#0C447C}
+.c-amber-card{background:#FAEEDA;border:0.5px solid #EF9F27}
+.c-amber-card .big{color:#633806}.c-amber-card .denom{color:#854F0B}.c-amber-card .stat-label{color:#412402}.c-amber-card .stat-sub{color:#854F0B}.c-amber-card svg{stroke:#633806}
+.divider{border:none;border-top:0.5px solid var(--border);margin:4px 0 12px}
+.section-label{font-size:14px;font-weight:500;color:var(--text-primary);margin-bottom:10px}
+.finding{border-radius:10px;padding:14px 18px;margin-bottom:10px;border-width:0.5px;border-style:solid}
+.finding-title{font-size:13px;font-weight:500;margin-bottom:4px}
+.finding-body{font-size:12px;line-height:1.6}
+.f-teal{background:#E1F5EE;border-color:#5DCAA5}.f-teal .finding-title{color:#04342C}.f-teal .finding-body{color:#0F6E56}
+.f-coral{background:#FAECE7;border-color:#F0997B}.f-coral .finding-title{color:#4A1B0C}.f-coral .finding-body{color:#993C1D}
+.f-amber{background:#FAEEDA;border-color:#EF9F27}.f-amber .finding-title{color:#412402}.f-amber .finding-body{color:#854F0B}
+.f-pink{background:#FBEAF0;border-color:#ED93B1}.f-pink .finding-title{color:#4B1528}.f-pink .finding-body{color:#993556}
+.f-gray{background:#F1EFE8;border-color:#B4B2A9}.f-gray .finding-title{color:#2C2C2A}.f-gray .finding-body{color:#5F5E5A}
+</style>
+
+<div style="padding:4px 0">
+  <div class="grid">
+    <!-- Participants -->
+    <div class="stat-card c-purple-card">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round">
+            <circle cx="16" cy="11" r="6"/>
+            <path d="M4 28 Q4 20 16 20 Q28 20 28 28"/>
+          </svg>
+        </div>
+        <div class="stat-num"><span class="big">23</span></div>
+      </div>
+      <div class="stat-label">Participants</div>
+      <div class="stat-sub">Across 5 rounds of testing</div>
+    </div>
+
+    <!-- Task Completion -->
+    <div class="stat-card c-teal-card">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="16" cy="16" r="13"/>
+            <path d="M9 16 L13 21 L23 11"/>
+          </svg>
+        </div>
+        <div class="stat-num"><span class="big">20</span><span class="denom">/ 23</span></div>
+      </div>
+      <div class="stat-label">Task Completion Rate</div>
+      <div class="stat-sub">87% successfully completed the task</div>
+    </div>
+
+    <!-- Time -->
+    <div class="stat-card c-blue-card">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="16" cy="16" r="13"/>
+            <path d="M16 8 L16 16 L22 20"/>
+          </svg>
+        </div>
+        <div class="stat-num"><span class="big">3:57</span></div>
+      </div>
+      <div class="stat-label">Avg. Time to Complete</div>
+      <div class="stat-sub">Range: 40 sec – 12 minutes</div>
+    </div>
+
+    <!-- Ease Rating -->
+    <div class="stat-card c-amber-card">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="16,4 19.5,12.5 29,13.5 22,20 24,29 16,24.5 8,29 10,20 3,13.5 12.5,12.5"/>
+          </svg>
+        </div>
+        <div class="stat-num"><span class="big">3.9</span><span class="denom">/ 5</span></div>
+      </div>
+      <div class="stat-label">Average Ease Rating</div>
+      <div class="stat-sub">On post-task survey</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="section-label">Key findings</div>
+
+  <div class="finding f-teal">
+    <div class="finding-title">High task completion</div>
+    <div class="finding-body">Most participants completed the workflow once they found it, indicating core functionality is usable.</div>
+  </div>
+  <div class="finding f-coral">
+    <div class="finding-title">Poor feature discoverability</div>
+    <div class="finding-body">Reserved Seating and Seat Manager were consistently hard to locate, especially within nested dropdown menus.</div>
+  </div>
+  <div class="finding f-amber">
+    <div class="finding-title">Navigation uncertainty</div>
+    <div class="finding-body">Many users explored multiple tabs before finding the correct path — IA did not match user expectations.</div>
+  </div>
+  <div class="finding f-pink">
+    <div class="finding-title">Lack of system feedback</div>
+    <div class="finding-body">Participants were unsure whether seat selections were saved — the interface provided little post-action confirmation.</div>
+  </div>
+  <div class="finding f-gray">
+    <div class="finding-title">Prototype limitations surfaced concerns</div>
+    <div class="finding-body">Pre-completed tasks and unsaved states introduced confusion, reinforcing the need for clear system feedback.</div>
+  </div>
+</div>
