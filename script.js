@@ -298,6 +298,89 @@ initImageLightbox();
 
 
 /* ============================================================
+   ABOUT CAROUSEL — fun photo slider with arrows and dots
+   ============================================================ */
+function initFunCarousel() {
+  const carousels = document.querySelectorAll('.fun-carousel');
+  if (!carousels.length) return;
+
+  carousels.forEach(carousel => {
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const prev = carousel.querySelector('.carousel-btn.prev');
+    const next = carousel.querySelector('.carousel-btn.next');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+
+    if (!slides.length || !prev || !next) return;
+
+    let currentIndex = 0;
+    let dots = [];
+
+    function getVisibleCount() {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 980) return 2;
+      return 3;
+    }
+
+    function getPageCount() {
+      const visibleCount = getVisibleCount();
+      return Math.max(1, slides.length - visibleCount + 1);
+    }
+
+    function buildDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+
+      const pageCount = getPageCount();
+      for (let idx = 0; idx < pageCount; idx += 1) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'carousel-dot';
+        dot.dataset.slide = String(idx);
+        dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+        dot.addEventListener('click', () => render(idx));
+        dotsContainer.appendChild(dot);
+      }
+
+      dots = Array.from(dotsContainer.querySelectorAll('.carousel-dot'));
+    }
+
+    function render(index) {
+      const visibleCount = getVisibleCount();
+      const pageCount = getPageCount();
+      currentIndex = (index + pageCount) % pageCount;
+
+      slides.forEach((slide, idx) => {
+        const isActive = idx >= currentIndex && idx < currentIndex + visibleCount;
+        slide.classList.toggle('is-active', isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('is-active', idx === currentIndex);
+      });
+    }
+
+    prev.addEventListener('click', () => render(currentIndex - 1));
+    next.addEventListener('click', () => render(currentIndex + 1));
+
+    buildDots();
+    window.addEventListener('resize', () => {
+      const pageCount = getPageCount();
+      if (currentIndex > pageCount - 1) {
+        currentIndex = pageCount - 1;
+      }
+      buildDots();
+      render(currentIndex);
+    });
+
+    render(0);
+  });
+}
+
+initFunCarousel();
+
+
+/* ============================================================
    FOOTER YEAR
    ============================================================ */
 const yearEl = document.getElementById('year');
