@@ -23,6 +23,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="Saylor%20Fuller%20Product%20Design%20Resume.pdf" class="nav-resume" download="Saylor Fuller Product Design Resume.pdf">Resume</a></li>
         <li>
           <a href="https://www.linkedin.com/in/saylor-fuller/" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
             <!-- LinkedIn SVG icon -->
@@ -38,17 +39,27 @@
   <!-- ===================== HERO ===================== -->
   <section id="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Hi, I'm</p>
-      <h1 class="hero-name">Saylor Fuller</h1>
-      <h2 class="hero-title">
-        <span class="typed-text" id="typed"></span><span class="cursor">|</span>
-      </h2>
-      <p class="hero-sub">
-        I design thoughtful digital products through research-led UX, polished UI systems, and seamless interaction flows.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="hero-eyebrow">Hi, I'm</p>
+          <h1 class="hero-name">Saylor Fuller</h1>
+          <h2 class="hero-title">
+            <span class="typed-text" id="typed"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-sub">
+            I design thoughtful digital products through research-led UX, polished UI systems, and seamless interaction flows.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap" aria-hidden="true">
+          <div class="hero-photo-frame">
+            <img src="Me.jpeg" alt="Portrait of Saylor Fuller" loading="eager" />
+          </div>
+          <div class="hero-photo-accent"></div>
+        </div>
       </div>
     </div>
     <!-- Decorative floating shapes -->
@@ -72,7 +83,7 @@
       <h2 class="section-heading">Selected UX/UI work</h2>
       <div class="projects-grid">
 
-        <article class="project-card">
+        <article class="project-card" hidden aria-hidden="true">
           <div class="project-img img-missing project-img-coming-soon">
             <div class="project-img-placeholder">Coming Soon</div>
           </div>
@@ -95,10 +106,10 @@
         <article class="project-card">
           <div class="project-img">
             <img src="form-builder-forms-header.png" alt="Vega Form Builder Feature header" onerror="this.parentElement.classList.add('img-missing')" />
-            <div class="project-img-placeholder">Form Builder Feature</div>
+            <div class="project-img-placeholder">Streamlining Information Collection for K–12 Events, Reducing Admin Work by 13% and Driving 5 New Customer Conversions</div>
           </div>
           <div class="project-body">
-            <h3>Form Builder Feature</h3>
+            <h3>Streamlining Information Collection for K–12 Events, Reducing Admin Work by 13% and Driving 5 New Customer Conversions</h3>
             <p class="project-company">Company: Vega Events</p>
             <div class="project-tags">
               <span>UX Research</span>
@@ -119,7 +130,7 @@
             <div class="project-img-placeholder">Reserved Seating Feature</div>
           </div>
           <div class="project-body">
-            <h3>Reserved Seating Feature</h3>
+            <h3>Expanded Vega's Ticketing Platform to Unlock Enterprise Adoption and New Markets</h3>
             <p class="project-company">Company: Vega Events</p>
             <div class="project-tags">
               <span>Product Strategy</span>
@@ -136,7 +147,7 @@
 
         <article class="project-card" hidden aria-hidden="true">
           <div class="project-img">
-            <img src="project3.png" alt="Vega Cart & Checkout Functionality" onerror="this.parentElement.classList.add('img-missing')" />
+            <img src="checkout-header-1.png" alt="Vega Cart & Checkout Functionality" onerror="this.parentElement.classList.add('img-missing')" />
             <div class="project-img-placeholder">Cart & Checkout Functionality</div>
           </div>
           <div class="project-body">
@@ -155,7 +166,7 @@
           </div>
         </article>
 
-        <article class="project-card analytics-card">
+        <article class="project-card analytics-card" hidden aria-hidden="true">
           <div class="project-img">
             <img src="analytics-header.png" alt="Nu Skin Analytics Dashboard header" onerror="this.parentElement.classList.add('img-missing')" />
             <div class="project-img-placeholder">Analytics Dashboard Feature</div>
@@ -176,13 +187,13 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card stela-card">
           <div class="project-img">
             <img src="stela-heading.png" alt="Stela Onboarding header" onerror="this.parentElement.classList.add('img-missing')" />
-            <div class="project-img-placeholder">Stela Onboarding</div>
+            <div class="project-img-placeholder">Helping 130,000+ Brand Affiliates Build Momentum Toward Their First Earnings</div>
           </div>
           <div class="project-body">
-            <h3>Stela Onboarding</h3>
+            <h3>Helping 130,000+ Brand Affiliates Build Momentum Toward Their First Earnings</h3>
             <p class="project-company">Company: Nu Skin</p>
             <div class="project-tags">
               <span>Onboarding UX</span>

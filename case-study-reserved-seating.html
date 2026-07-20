@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reserved Seating Feature — Case Study | Saylor Fuller</title>
+  <title>Expanded Vega's Ticketing Platform to Unlock Enterprise Adoption and New Markets — Case Study | Saylor Fuller</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -96,7 +96,7 @@
     }
 
     .image-placeholder {
-      background: var(--bg-2);
+      background: var(--case-surface);
       border: 2px dashed var(--border);
       border-radius: var(--radius-lg);
       padding: 120px 40px;
@@ -114,7 +114,7 @@
     }
     .process-step {
       padding: 2rem;
-      background: var(--bg-2);
+      background: var(--case-surface);
       border-radius: var(--radius-lg);
     }
     .process-step h3 {
@@ -140,13 +140,13 @@
       justify-content: center;
     }
     .flow-card {
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
     }
     .flow-card.compact {
-      padding: 1rem;
+      padding: 0;
     }
     .flow-card img {
       width: 100%;
@@ -177,7 +177,7 @@
       border-radius: var(--radius-lg);
       overflow: hidden;
       border: 1px solid var(--border);
-      background: var(--bg-2);
+      background: var(--case-surface);
     }
     .case-media img,
     .case-media video {
@@ -257,7 +257,7 @@
     }
     .findings-embed {
       max-width: 980px;
-      margin-top: 1rem;
+      margin: 1rem 0 1.75rem;
     }
     .findings-embed iframe {
       display: block;
@@ -268,7 +268,7 @@
     }
     .mockup-callout {
       max-width: 980px;
-      margin-top: 1.25rem;
+      margin-top: 0;
     }
     .mockup-callout.final-mockup {
       margin-bottom: 2rem;
@@ -323,7 +323,7 @@
     <section class="case-study-header">
       <div class="container">
         <a href="index.html#projects" class="back-link">← Back to Projects</a>
-        <h1>Reserved Seating Feature</h1>
+        <h1>Expanded Vega's Ticketing Platform to Unlock Enterprise Adoption and New Markets</h1>
         <p class="case-study-intro">
           Designed a Reserved Seating experience for Vega Events by integrating Seats.io while preserving familiar patterns from the general admission workflow.
         </p>
@@ -336,12 +336,39 @@
           </div>
           <figure class="case-media desktop-frame-screen">
             <video controls preload="metadata">
-              <source src="reserved-seating-seat-manager.mp4" type="video/mp4" />
-              <source src="reserved-seating-seat-manager.mov" type="video/quicktime" />
+              <source src="reserved-seating-seat-manager.reencoded.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </figure>
         </div>
+
+        <script>
+          (() => {
+            const init = async () => {
+              const video = document.querySelector('video');
+              if (!video || video.dataset.blobLoaded === 'true') return;
+              const source = video.querySelector('source[src]');
+              const sourceUrl = source && source.getAttribute('src');
+              if (!sourceUrl) return;
+              try {
+                const response = await fetch(sourceUrl);
+                if (!response.ok) return;
+                const blob = await response.blob();
+                video.src = URL.createObjectURL(blob);
+                video.dataset.blobLoaded = 'true';
+                video.load();
+              } catch (_error) {
+                // Keep the direct source fallback.
+              }
+            };
+
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', init, { once: true });
+            } else {
+              init();
+            }
+          })();
+        </script>
 
         <div class="case-study-meta">
           <div class="meta-item">
@@ -366,7 +393,7 @@
 
     <section class="case-study-section">
       <div class="container">
-        <h2>Overview</h2>
+        <h2 data-subhead="Expanding Vega's Ticketing Platform Beyond General Admission">Overview</h2>
         <p>
           Vega's ticketing platform initially supported only general admission events, limiting schools that needed reserved seating for performances, graduations, and other assigned-seat events. I designed a Reserved Seating experience by integrating the Seats.io platform into Vega's existing ticketing workflow while navigating complex technical constraints.
         </p>
@@ -378,7 +405,7 @@
 
     <section class="case-study-section">
       <div class="container">
-        <h2>Problem</h2>
+        <h2 data-subhead="Supporting Complex Events Without Creating Complex Workflows">Challenge</h2>
         <p>
           Vega's ticketing platform was originally built for General Admission events, leaving schools without a native way to manage reserved seating.
         </p>
@@ -390,7 +417,7 @@
 
     <section class="case-study-section">
       <div class="container">
-        <h2>Solution</h2>
+        <h2 data-subhead="Integrating Reserved Seating Into a Familiar Ticketing Experience">Solution</h2>
         <p>
           I designed an end-to-end Reserved Seating experience by integrating Seats.io into Vega's existing ticketing workflow.
         </p>
@@ -412,8 +439,8 @@
 
     <section class="case-study-section">
       <div class="container">
-        <h2>Process</h2>
-        <h3>Interviews</h3>
+        <h2 data-subhead="Designing Within Technical and User Constraints">Process</h2>
+        <h3>Research</h3>
         <p>
           I partnered with stakeholders and interviewed school administrators to better understand how they managed reserved seating events. While every school approached the problem differently, consistent patterns emerged around the flexibility they needed to manage complex seating arrangements.
         </p>
@@ -429,20 +456,20 @@
           These conversations revealed an opportunity to expand Vega's ticketing platform beyond General Admission while keeping the experience approachable for existing customers.
         </p>
 
-        <h3>User Flows</h3>
+        <h3>Insights</h3>
         <p>
           To guide the interaction model, I mapped the reserved seating ecosystem to show how three core areas, seat maps, ticket pricing, and seat management, connect and converge into a published ticketed event.
         </p>
         <div class="flow-grid single-diagram">
           <div class="flow-card compact">
-            <img src="ecosystem-diagramming.svg" alt="Ecosystem Diagramming flowchart" loading="lazy" />
+            <img src="Case%20Study%20Content/Reserved%20Seating/Reserved%20Seating%20Flow%20Chart.png" alt="Reserved Seating flowchart" loading="lazy" />
           </div>
         </div>
         <p>
           This diagram helped align product and engineering on how multiple configuration paths should feed one clear publishing outcome without increasing cognitive load.
         </p>
 
-        <h3>Opportunity</h3>
+        <h3>Strategy</h3>
         <p>
           Rather than building a completely separate reserved seating product, I explored how reserved seating could become a natural extension of Vega's existing ticketing workflow.
         </p>
@@ -453,7 +480,7 @@
           My guiding principle became: Add new capabilities without introducing a new mental model.
         </p>
 
-        <h3>Usability Testing</h3>
+        <h3>Validation</h3>
         <p>
           I led a team of six university interns in conducting usability tests for Vega. I designed the test plan, wrote the surveys, and created all participant instructions, then met with the students weekly to review findings and synthesize insights about discoverability, clarity, and confidence within the reserved seating workflow.
         </p>
@@ -464,7 +491,7 @@
           <img src="reserved-seating-first-mockup.png" alt="First reserved seating mockup with annotated usability observations" loading="lazy" />
         </figure>
 
-        <h3>Design & Iteration</h3>
+        <h3>Iteration</h3>
         <p>
           Because Seats.io introduced technical constraints around seat map creation and management, I worked closely with Product and Engineering to understand what functionality could be exposed within Vega.
         </p>
@@ -501,15 +528,36 @@
 
     <section class="case-study-section">
       <div class="container">
-        <h2>Outcome</h2>
+        <h2 data-subhead="Unlocking Enterprise Adoption and New Revenue Opportunities">Outcome</h2>
         <p>
-          The Reserved Seating feature expanded Vega's ticketing capabilities to support a much broader range of school events while maintaining a familiar administrative experience.
+          Reserved Seating expanded Vega's ticketing platform beyond General Admission, addressing both a critical customer need and a key business opportunity.
         </p>
         <p>
-          By integrating Seats.io into existing workflows, schools gained powerful seating management tools without sacrificing usability.
+          Ticketing was one of Vega's core revenue drivers, generating <strong>$1 + 5% of every ticket sold</strong>. By supporting assigned-seat events, Vega could serve more organizations and unlock additional ticketing opportunities.
         </p>
         <p>
-          The project reinforced the importance of designing around technical constraints rather than exposing them to users. Instead of introducing an entirely new workflow, the final solution extended an existing one, allowing administrators to accomplish more while interacting with an interface they already understood.
+          The largest school district in Utah, Alpine School District, identified Reserved Seating as a requirement before committing to adopting Vega district-wide. With <strong>86,000+ students across 90+ schools</strong>, this capability helped position Vega to support enterprise-scale event management.
+        </p>
+        <p>
+          The feature also opened opportunities in <strong>three new markets</strong>, dance studios, music groups, and theater organizations, where reserved seating is essential.
+        </p>
+        <p>
+          By extending Vega's capabilities while maintaining a familiar workflow, Reserved Seating strengthened the product offering, expanded market reach, and created new revenue potential.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2 data-subhead="From Building Tools to Building Intelligence">What's Next</h2>
+        <p>
+          While the current Reserved Seating experience successfully expanded Vega's ticketing capabilities, the next opportunity is to rethink how administrators create seating experiences altogether.
+        </p>
+        <p>
+          Today, creating a seat map requires manual input and familiarity with specialized tools. With AI, schools could simply capture their existing space through photos, and Vega could transform that information into a ready-to-use digital seating layout.
+        </p>
+        <p>
+          By combining automation with the workflows administrators already know, Vega could continue reducing operational complexity and make advanced event management accessible to every school.
         </p>
       </div>
     </section>

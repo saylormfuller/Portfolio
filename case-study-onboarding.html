@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stela Onboarding — Case Study | Saylor Fuller</title>
+  <title>Helping 130,000+ Brand Affiliates Build Momentum Toward Their First Earnings — Case Study | Saylor Fuller</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,7 +79,7 @@
       margin-bottom: 0.4rem;
     }
     .image-placeholder {
-      background: var(--bg-2);
+      background: var(--case-surface);
       border: 2px dashed var(--border);
       border-radius: var(--radius-lg);
       padding: 120px 40px;
@@ -93,7 +93,7 @@
       border-radius: var(--radius-lg);
       overflow: hidden;
       border: 1px solid var(--border);
-      background: var(--bg-2);
+      background: var(--case-surface);
     }
     .case-media.hero-callout {
       margin-top: 2rem;
@@ -108,10 +108,31 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .process-flowchart {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0 0;
+    }
+    .process-flowchart.case-process-media {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+    }
     .case-media.outcome-video {
-      max-width: 360px;
+      max-width: 240px;
       margin-left: auto;
       margin-right: auto;
+    }
+    .case-process-section .case-media.outcome-video.case-process-frame {
+      width: 100% !important;
+      max-width: 240px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
     .case-media img,
     .case-media video {
@@ -129,7 +150,7 @@
       margin: 1rem 0 0;
       padding: 1rem 1.25rem;
       border-left: 4px solid var(--accent);
-      background: var(--bg-2);
+      background: var(--case-surface);
       border-radius: 8px;
       color: var(--text);
       font-style: italic;
@@ -175,7 +196,7 @@
     <section class="case-study-header">
       <div class="container">
         <a href="index.html#projects" class="back-link">← Back to Projects</a>
-        <h1>Stela Onboarding</h1>
+        <h1>Helping 130,000+ Brand Affiliates Build Momentum Toward Their First Earnings</h1>
         <p class="case-study-intro">
           Designed an onboarding experience within the Stela app to help new affiliates take their first steps toward earning income.
         </p>
@@ -207,7 +228,7 @@
 
     <section class="case-study-section">
       <div class="container">
-        <h2>Overview</h2>
+        <h2 data-subhead="Creating a Better Start for New Affiliates">Overview</h2>
         <p>
           Nu Skin has traditionally relied on Brand Affiliates to onboard and train new members, leading to inconsistent guidance and lower early engagement.
         </p>
@@ -222,44 +243,61 @@
 
     <section class="case-study-section">
       <div class="container">
-        <h2>My Contributions</h2>
-        <div class="contributions-grid">
-          <div class="contribution-card">
-            <h3>UX Strategy</h3>
-            <p>Collaborated with Product Owners, Customer Experience, and UX peers to define a clear onboarding concept that addressed early affiliate engagement and training consistency.</p>
-          </div>
-          <div class="contribution-card">
-            <h3>Prototype Design</h3>
-            <p>Designed a high-fidelity onboarding flow in under a day, focusing on clarity, motivation, and actionable next steps for new affiliates.</p>
-          </div>
-          <div class="contribution-card">
-            <h3>User Validation</h3>
-            <p>Led in-person guerrilla testing and remote moderated usability sessions to validate the experience and identify areas for clearer guidance and coaching.</p>
-          </div>
-        </div>
+        <h2 data-subhead="Inconsistent Onboarding Limits Affiliate Success">Problem</h2>
+        <p>
+          Nu Skin's onboarding experience depended almost entirely on peer-led training from existing Brand Affiliates. While some new affiliates received excellent mentorship, many were left to navigate the business and the Stela platform on their own, resulting in inconsistent onboarding experiences and lower early engagement.
+        </p>
+        <p>
+          Internal data revealed a critical business insight: <strong>Brand Affiliates who earned their first $100 within six months were significantly more likely to remain active long-term.</strong> Yet without structured guidance, many new affiliates never completed the key actions, such as creating their first Product Offer, that helped them reach this milestone.
+        </p>
+        <p>
+          The opportunity was to create a scalable onboarding experience that could provide every new affiliate with the knowledge and confidence needed to succeed, regardless of whether they had an engaged mentor.
+        </p>
       </div>
     </section>
 
     <section class="case-study-section">
       <div class="container">
-        <h2>Process</h2>
+        <h2 data-subhead="Creating a Guided Path to Early Success">Solution</h2>
+        <p>
+          To reduce reliance on peer-led training, we designed an in-app onboarding experience within <strong>Stela</strong> that provides new Brand Affiliates with structured guidance from their very first day.
+        </p>
+        <p>
+          Rather than overwhelming users with information, the experience introduces the highest-impact business activities through clear, actionable steps that help affiliates create their first Product Offer, invite customers, and begin earning income with confidence.
+        </p>
+        <p>
+          By embedding onboarding directly into the product, the experience creates a consistent learning journey that supports users in reaching the milestones most closely tied to long-term engagement and retention.
+        </p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2 data-subhead="From Research to Refined Experience">Process</h2>
         <div class="process-list">
           <div class="process-item">
-            <h3>Research & Discovery</h3>
+            <h3>Understanding Why New Affiliates Lose Momentum</h3>
+            <p>To understand why many new affiliates failed to reach critical early milestones, I mapped the onboarding journey from account creation through their first earnings.</p>
+            <p>The visualization revealed a clear pattern. Affiliates who received guidance from an engaged upline learned the platform, created their first Product Offer, and were more likely to earn <strong>$100 within their first six months</strong>—a milestone Nu Skin identified as a strong predictor of long-term retention. Those without structured support often struggled to learn independently, never reached that earnings benchmark, and were significantly less likely to continue selling beyond their first year.</p>
+            <p>This exercise reframed the challenge from simply teaching users how to use Stela to designing a scalable onboarding system that helps every new affiliate reach the behaviors and earnings milestones most closely tied to long-term success.</p>
+            <img class="process-flowchart" src="Case Study Content/Stela Onboarding/Affiliate Onboarding Flow-selection.png" alt="Affiliate onboarding flow chart showing how support affects early earnings and retention" loading="lazy" />
+          </div>
+          <div class="process-item">
+            <h3>Understanding Early Success</h3>
             <p>As part of a company-wide UX Hackathon, I collaborated with Product Owners, Customer Experience, and fellow designers to explore solutions for improving new affiliate onboarding. Through collaborative brainstorming and affinity mapping, we generated and prioritized ideas before selecting a concept to prototype and validate.</p>
             <figure class="case-media section-callout">
               <img src="stela-rd.png" alt="Affinity mapping and research notes from Stela onboarding discovery" loading="lazy" />
             </figure>
           </div>
           <div class="process-item">
-            <h3>Design & Iteration</h3>
+            <h3>Turning Insights Into Action</h3>
             <p>Working alongside another UX Designer, I translated our ideas into a high-fidelity prototype within a single day. Our goal was to create an onboarding experience that was simple, actionable, and motivating, while incorporating small moments of delight to keep new users engaged.</p>
             <figure class="case-media">
               <img src="stela-flow.png" alt="Stela onboarding end-to-end flow screens" loading="lazy" />
             </figure>
           </div>
           <div class="process-item">
-            <h3>Guerrilla Testing</h3>
+            <h3>Learning From Real Affiliates</h3>
             <p>We tested the prototype in the Nu Skin headquarters lobby with Brand Affiliates attending a company event. Participants responded positively to the concept and immediately recognized the value of having guided onboarding within Stela.</p>
             <figure class="case-media">
               <img src="stela-testing.jpg" alt="In-person Stela onboarding testing session with affiliates" loading="lazy" />
@@ -274,7 +312,7 @@
             </ul>
           </div>
           <div class="process-item">
-            <h3>Remote Usability Testing</h3>
+            <h3>Validating With New Users</h3>
             <p>To validate the experience with first-time users, we conducted a moderated usability study through UserZoom. Participants completed onboarding tasks while thinking aloud and shared feedback on clarity and navigation.</p>
           </div>
           <div class="process-item">
@@ -283,11 +321,10 @@
             <blockquote class="insight-quote">“A little more explanation on each page could be helpful. I was confused on the discount step, but a simple explanation would have made it make sense.” — New Brand Affiliate</blockquote>
           </div>
           <div class="process-item">
-            <h3>Final Iteration</h3>
+            <h3>Evolving the Experience</h3>
             <figure class="case-media outcome-video">
               <video controls preload="metadata">
-                <source src="stela-onboarding-flow.mp4" type="video/mp4" />
-                <source src="stela-onboarding-flow.mov" type="video/quicktime" />
+                <source src="stela-onboarding-flow.reencoded.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </figure>
@@ -298,9 +335,20 @@
 
     <section class="case-study-section">
       <div class="container">
-        <h2>Outcome</h2>
-        <p>Research showed that new affiliates needed ongoing guidance rather than a one-time onboarding flow. Based on our findings, we recommended a progressive onboarding experience that surfaces the next most valuable action at the right time: creating a product offer, inviting customers to Vera, and sharing a sign-up invite.</p>
-        <p>This approach reduces cognitive load, reinforces high-impact behaviors, and helps new affiliates build momentum toward their first earnings milestone.</p>
+        <h2 data-subhead="Shaping a More Effective Onboarding Journey">Outcome</h2>
+        <p>Nu Skin's internal data identified a critical predictor of long-term success: <strong>Brand Affiliates who earn their first $100 within six months are significantly more likely to remain active beyond their first year.</strong> However, many new affiliates never reached this milestone because onboarding relied heavily on inconsistent peer-led training rather than structured, in-product guidance.</p>
+        <p>Our research showed that affiliates needed ongoing coaching-not a one-time onboarding experience. Based on these insights, we recommended a progressive onboarding system that guides users toward the next most impactful action, including creating their first Product Offer, inviting customers to Vera, and sharing sign-up invites.</p>
+        <p>Designed for <strong>130,000+ Brand Affiliates</strong> using the Stela app, this approach creates a scalable onboarding experience that reduces cognitive load, builds confidence through incremental wins, and helps more users progress toward the <strong>first $100 milestone</strong> most closely associated with long-term retention.</p>
+      </div>
+    </section>
+
+    <section class="case-study-section">
+      <div class="container">
+        <h2 data-subhead="The Future of Intelligent Onboarding">What's Next</h2>
+        <p>When this concept was designed, AI-powered product experiences were still in their infancy. The onboarding journey provided a structured path that guided every new affiliate through the same foundational milestones.</p>
+        <p>Today, that experience could evolve into an intelligent coaching system. By analyzing each Brand Affiliate's progress, such as whether they've created a Product Offer, invited customers to Vera, or completed other key business activities, AI could identify gaps in their journey and deliver personalized recommendations at the moment they're needed most.</p>
+        <p>Rather than presenting the same onboarding to every user, the experience could adapt in real time by providing contextual coaching, interactive walkthroughs, educational resources, and next-step recommendations based on each affiliate's goals and progress.</p>
+        <p>This evolution would transform onboarding from a one-time experience into an ongoing business coach, helping more than <strong>130,000 Brand Affiliates</strong> build confidence, achieve key performance milestones, and strengthen long-term retention.</p>
       </div>
     </section>
   </main>
